@@ -12,5 +12,8 @@
     "start": "wrangler dev",
     "deploy": "wrangler publish",
     "test": "vitest"
+  },
+  "dependencies": {
+    "randexp": "^0.5.3"
   }
 }
