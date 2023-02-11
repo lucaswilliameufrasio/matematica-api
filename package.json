@@ -14,6 +14,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "hono": "^2.7.7",
     "randexp": "^0.5.3"
   }
 }
