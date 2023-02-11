@@ -25,7 +25,7 @@ export interface Env {
 
 const app = new Hono()
 
-app.get('/', generateArithmeticOperationHandler)
+app.get('/', (context) => context.text('Hello! This is an API about mathematic challenges, hope you enjoy.'))
 app.get('/arithmetic-challenge', generateArithmeticOperationHandler)
 
 export default app
