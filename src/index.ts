@@ -1,3 +1,5 @@
+import { randexp } from 'randexp'
+
 /**
  * Welcome to Cloudflare Workers! This is your first worker.
  *
@@ -25,6 +27,9 @@ export default {
 		env: Env,
 		ctx: ExecutionContext
 	): Promise<Response> {
-		return new Response("Hello World!");
+		const arithmeticOperation = randexp(/^\d([+*]\d){1,3}$/)
+		return new Response(JSON.stringify({
+			arithmeticOperation,
+		}));
 	},
 };
